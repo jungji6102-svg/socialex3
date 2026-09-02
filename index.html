@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사회 어휘 카드 | 민주주의와 선거</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="4" y="18" width="40" height="26" rx="4" fill="#1e2a4a"/>
+      <rect x="9" y="23" width="30" height="16" rx="2" fill="#eef1f6"/>
+      <path d="M22 27L26 31L34 21" stroke="#e0a22e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 18L24 4L44 18" stroke="#1e2a4a" stroke-width="3" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div class="brand-text">
+      <h1>사회 어휘 카드</h1>
+      <p>다국어로 배우는 초등 사회 개념어 · 민주주의와 선거</p>
+    </div>
+  </div>
+  <p class="lede">
+    한자어로 이루어진 사회 개념어는 한국 학생에게도, 한국어가 서툰 외국인 학생에게도 어렵습니다.
+    카드를 눌러 <strong>목표 어휘 · 이미지 · 설명 음성</strong>을 함께 확인하고,
+    음성이 끝나면 나타나는 <strong>영어 · 러시아어 · 중국어</strong> 국기를 눌러 같은 내용을 모국어로도 들어보세요.
+  </p>
+</header>
+
+<main class="deck">
+  <div class="deck-heading">
+    <h2>민주주의와 시민참여 · 선거의 의미와 역할</h2>
+    <span id="wordCount">7개 어휘</span>
+  </div>
+  <div class="grid" id="grid" role="list"></div>
+</main>
+
+<footer class="site-footer">
+  2026 사회SOC 어휘 학습 자료 · 다문화·다국어 배경 학생을 위한 사회과 개념어 지원 웹사이트
+</footer>
+
+<!-- ===================== detail overlay ===================== -->
+<section class="detail" id="detail" aria-hidden="true">
+  <div class="detail-topbar">
+    <button class="close-btn" id="closeBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      목록으로
+    </button>
+    <div style="position:relative;">
+      <div class="flags" id="flags">
+        <button class="flag-btn" id="flagEn" type="button" data-lang="en" aria-label="English"></button>
+        <button class="flag-btn" id="flagRu" type="button" data-lang="ru" aria-label="Русский"></button>
+        <button class="flag-btn" id="flagZh" type="button" data-lang="zh" aria-label="中文"></button>
+      </div>
+      <span class="flags-caption" id="flagsCaption">다른 언어로 듣기</span>
+    </div>
+  </div>
+
+  <div class="detail-body">
+    <span class="unit-tag" id="unitTag">민주주의와 선거</span>
+
+    <div class="word-row">
+      <button class="replay-btn" id="replayBtn" type="button" aria-label="다시 듣기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 5L6 9H3v6h3l5 4V5z"/>
+          <path d="M15.5 8.5a5 5 0 0 1 0 7"/>
+          <path d="M18.5 5.5a9 9 0 0 1 0 13"/>
+        </svg>
+      </button>
+      <h2 class="word-display" id="wordDisplay" lang="ko">선거</h2>
+    </div>
+
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+    <div class="image-frame">
+      <img id="wordImage" src="" alt="">
+    </div>
+
+    <div class="desc-card">
+      <p class="desc-text" id="descText" lang="ko"></p>
+      <button class="examples-toggle" id="examplesToggle" type="button">
+        <span id="examplesToggleLabel">생활 속 예시 더 보기</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <ul class="examples-list" id="examplesList" lang="ko"></ul>
+    </div>
+  </div>
+
+  <audio id="player" preload="auto"></audio>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>
